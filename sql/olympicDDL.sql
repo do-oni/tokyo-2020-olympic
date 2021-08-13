@@ -1,4 +1,4 @@
----- 올림픽 (olympic) 테이블
+---- 올림픽 (olympic)
 DROP TABLE olympic cascade constraint;
 --
 ---- 메달 (medal)
