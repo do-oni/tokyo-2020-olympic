@@ -15,7 +15,7 @@ public class SportDAO {
 	
 	private static Properties sql = DBUtil.getSql();
 	
-	//Á¾¸ñ Á¤º¸ Ãß°¡
+	//ì¢…ëª© ì •ë³´ ì¶”ê°€
 	public static boolean addSport(SportDTO sport) throws SQLException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -37,7 +37,7 @@ public class SportDAO {
 		return false;
 	}
 				
-	//±¹°¡ ÀÌ¸§À¸·Î Á¾¸ñ ÀÌ¸§ º¯°æ
+	//êµ­ê°€ ì´ë¦„ìœ¼ë¡œ ì¢…ëª© ì´ë¦„ ë³€ê²½
 	public static boolean updateSport(String country, String sportName) throws SQLException{
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -59,7 +59,7 @@ public class SportDAO {
 		return false;
 	}
 
-	//Á¾¸ñ Á¤º¸ »èÁ¦
+	//ì¢…ëª© ì •ë³´ ì‚­ì œ
 	public static boolean deleteSport(String country, String sportName) throws SQLException{
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -80,7 +80,7 @@ public class SportDAO {
 		return false;
 	}
 				
-	//Æ¯Á¤ ±¹°¡ÀÇ Á¾¸ñ ÀÌ¸§À¸·Î ¼±¼ö Á¤º¸ ¹İÈ¯
+	//íŠ¹ì • êµ­ê°€ì˜ ì¢…ëª© ì´ë¦„ìœ¼ë¡œ ì„ ìˆ˜ ì •ë³´ ë°˜í™˜
 	public static SportDTO getSport(String country, String sportName) throws SQLException{
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -104,7 +104,7 @@ public class SportDAO {
 		return sport;
 	}
 
-	//¸ğµç Á¾¸ñ Á¤º¸ ¹İÈ¯
+	//ëª¨ë“  ì¢…ëª© ì •ë³´ ë°˜í™˜
 	public static ArrayList<SportDTO> getAllSport() throws SQLException{
 		Connection con = null;
 		PreparedStatement pstmt = null;
