@@ -19,7 +19,7 @@ public class PlayerDAO {
 	static Logger logger = Logger.getLogger("olympic.view.PlayerDAO");
 	private static Properties sql = DBUtil.getSql();
 	
-	//¼±¼ö Á¤º¸ Ãß°¡
+	//ì„ ìˆ˜ ì •ë³´ ì¶”ê°€
 	public static boolean addPlayer(PlayerDTO player) throws SQLException {
 		
 		Connection con = null;
@@ -46,7 +46,7 @@ public class PlayerDAO {
 		return false;
 	}
 			
-	//¼±¼ö¹øÈ£·Î ¼±¼öÀÌ¸§ º¯°æ
+	//ì„ ìˆ˜ë²ˆí˜¸ë¡œ ì„ ìˆ˜ì´ë¦„ ë³€ê²½
 	public static boolean updatePlayer(String name, int playerNum) throws SQLException {
 		
 		Connection con = null;
@@ -55,7 +55,7 @@ public class PlayerDAO {
 		try{
 			con = DBUtil.getConnection();
 			
-			//player table ¼öÁ¤
+			//player table ìˆ˜ì •
 			pstmt = con.prepareStatement(sql.getProperty("updatePlayer"));
 			pstmt.setString(1, name);
 			pstmt.setInt(2, playerNum);
@@ -71,7 +71,7 @@ public class PlayerDAO {
 		return false;
 	}
 
-	//Á¾¸ñÀÌ¸§À¸·Î Æ¯Á¤ ¼±¼ö Á¤º¸ »èÁ¦
+	//ì¢…ëª©ì´ë¦„ìœ¼ë¡œ íŠ¹ì • ì„ ìˆ˜ ì •ë³´ ì‚­ì œ
 	public static boolean deletePlayer(String sportName, String name) throws SQLException {
 		
 		Connection con = null;
@@ -94,7 +94,7 @@ public class PlayerDAO {
 		return false;
 	}
 	
-	//Æ¯Á¤ ¼±¼ö Á¤º¸ ¹İÈ¯
+	//íŠ¹ì • ì„ ìˆ˜ ì •ë³´ ë°˜í™˜
 	public static PlayerDTO getPlayer(String country, String name) throws SQLException, NotExistException {
 		
 		Connection con = null;
@@ -113,7 +113,7 @@ public class PlayerDAO {
 				logger.info(rset.getString(2));
 				player = new PlayerDTO(rset.getInt(1), rset.getString(2), rset.getInt(3), rset.getString(4), rset.getString(5));
 			}else {
-				throw new NotExistException("¼±¼ö Á¤º¸°¡ ¾ø½À´Ï´Ù");
+				throw new NotExistException("ì„ ìˆ˜ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤");
 			}
 		}finally{
 			DBUtil.close(con, pstmt, rset);
@@ -121,7 +121,7 @@ public class PlayerDAO {
 		return player;
 	}
 			
-	//¸ğµç ¼±¼ö Á¤º¸ ¹İÈ¯
+	//ëª¨ë“  ì„ ìˆ˜ ì •ë³´ ë°˜í™˜
 	public static ArrayList<PlayerDTO> getAllPlayer() throws SQLException {
 		
 		Connection con = null;
