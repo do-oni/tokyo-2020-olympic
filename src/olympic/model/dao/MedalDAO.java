@@ -16,7 +16,7 @@ public class MedalDAO {
 	
 	private static Properties sql = DBUtil.getSql();
 	
-	//¸Ş´Ş Á¤º¸ Ãß°¡
+	//ë©”ë‹¬ ì •ë³´ ì¶”ê°€
 	public static boolean addMedal(MedalDTO medal) throws SQLException {
 		
 		Connection con = null;
@@ -44,7 +44,7 @@ public class MedalDAO {
 		return false;
 	}
 		
-	//¸Ş´Ş Á¤º¸ ¼öÁ¤
+	//ë©”ë‹¬ ì •ë³´ ìˆ˜ì •
 	public static boolean updateMedal(String country, String sportName) throws SQLException {
 		
 		Connection con = null;
@@ -67,7 +67,7 @@ public class MedalDAO {
 		return false;
 	}
 
-	//Æ¯Á¤ Á¾¸ñÀÇ ¸Ş´Ş Á¤º¸ »èÁ¦
+	//íŠ¹ì • ì¢…ëª©ì˜ ë©”ë‹¬ ì •ë³´ ì‚­ì œ
 	public static boolean deleteMedal(String sportName) throws SQLException {
 		
 		Connection con = null;
@@ -89,7 +89,7 @@ public class MedalDAO {
 		return false;
 	}
 		
-	//¸ğµç ¸Ş´Ş Á¤º¸ ¹İÈ¯
+	//ëª¨ë“  ë©”ë‹¬ ì •ë³´ ë°˜í™˜
 	public static ArrayList<MedalDTO> getAllMedal() throws SQLException {
 		
 		Connection con = null;
