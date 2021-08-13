@@ -18,7 +18,7 @@ public class OlympicDAO {
 	
 	private static Properties sql = DBUtil.getSql();
 
-	//¿Ã¸²ÇÈ Á¤º¸ Ãß°¡
+	//ì˜¬ë¦¼í”½ ì •ë³´ ì¶”ê°€
 	public static boolean addOlympic(OlympicDTO olympic) throws SQLException {
 		
 		Connection con = null;
@@ -44,7 +44,7 @@ public class OlympicDAO {
 		return false;
 	}
 	
-	//¿Ã¸²ÇÈ id·Î ¿Ã¸²ÇÈ Á¾¸ñ ¼öÁ¤
+	//ì˜¬ë¦¼í”½ idë¡œ ì˜¬ë¦¼í”½ ì¢…ëª© ìˆ˜ì •
 	public static boolean updateOlympic(int olympicId, String sportName) throws SQLException {
 		
 		Connection con = null;
@@ -68,7 +68,7 @@ public class OlympicDAO {
 		return false;
 	}
 
-	//¿Ã¸²ÇÈ Á¤º¸ »èÁ¦
+	//ì˜¬ë¦¼í”½ ì •ë³´ ì‚­ì œ
 	public static boolean deleteOlympic(int olympicId) throws SQLException {
 		
 		Connection con = null;
@@ -90,7 +90,7 @@ public class OlympicDAO {
 		return false;
 	}
 	
-	//¿Ã¸²ÇÈ id·Î ¿Ã¸²ÇÈ Á¤º¸ ¹ÝÈ¯
+	//ì˜¬ë¦¼í”½ idë¡œ ì˜¬ë¦¼í”½ ì •ë³´ ë°˜í™˜
 	public static OlympicDTO getOlympic(int olympicId) throws SQLException {
 		
 		Connection con = null;
@@ -113,7 +113,7 @@ public class OlympicDAO {
 		return olympic;
 	}
 
-	//¸ðµç ¿Ã¸²ÇÈ Á¤º¸ ¹ÝÈ¯
+	//ëª¨ë“  ì˜¬ë¦¼í”½ ì •ë³´ ë°˜í™˜
 	public static ArrayList<OlympicDTO> getAllOlympic() throws SQLException {
 		
 		Connection con = null;
