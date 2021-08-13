@@ -1,21 +1,21 @@
----- ¿Ã¸²ÇÈ (olympic) Å×ÀÌºí
+---- ì˜¬ë¦¼í”½ (olympic) í…Œì´ë¸”
 DROP TABLE olympic cascade constraint;
 --
----- ¸Ş´Ş (medal)
+---- ë©”ë‹¬ (medal)
 DROP TABLE medal cascade constraint;
 --
----- Á¾¸ñ(sport)
+---- ì¢…ëª©(sport)
 DROP TABLE sport cascade constraint;
 --
----- ¼±¼ö (player)
+---- ì„ ìˆ˜ (player)
 DROP TABLE player cascade constraint;
 --
 DROP SEQUENCE olympic_id_seq;
 
---ÇÑÁ¾¸ñ Æ¯Á¤ ¼±¼ö°¡ È¹µæÇÑ ¸Ş´Ş.  (¼±¼ö ±âÁØ) A¼±¼ö°¡ ±İ Àº µ¿ ¸Ş´Ş     ¸Ş¼Òµå(±¹°¡º° È¹µæÇÑ ¸Ş´Ş ¼ö)  Á¾¸ñº° È¹µæÇÑ ¸Ş´Ş ¼ö?
---1 ÇÑ±¹ ¾ç±Ã A¼±¼ö 5
---3 ÇÑ±¹ ¾ç±Ã C¼±¼ö 4
---2 ÇÑ±¹ Ææ½Ì B¼±¼ö 0
+--í•œì¢…ëª© íŠ¹ì • ì„ ìˆ˜ê°€ íšë“í•œ ë©”ë‹¬.  (ì„ ìˆ˜ ê¸°ì¤€) Aì„ ìˆ˜ê°€ ê¸ˆ ì€ ë™ ë©”ë‹¬     ë©”ì†Œë“œ(êµ­ê°€ë³„ íšë“í•œ ë©”ë‹¬ ìˆ˜)  ì¢…ëª©ë³„ íšë“í•œ ë©”ë‹¬ ìˆ˜?
+--1 í•œêµ­ ì–‘ê¶ Aì„ ìˆ˜ 5
+--3 í•œêµ­ ì–‘ê¶ Cì„ ìˆ˜ 4
+--2 í•œêµ­ íœì‹± Bì„ ìˆ˜ 0
 
 CREATE TABLE olympic (
 	 olympic_id       NUMBER(5) PRIMARY KEY,
