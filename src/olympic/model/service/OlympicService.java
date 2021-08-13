@@ -37,7 +37,7 @@ public class OlympicService {
 		return instance;
 	}
 
-	// 1. ¸ğµç ¿Ã¸²ÇÈ Á¤º¸ ¹İÈ¯
+	// 1. ëª¨ë“  ì˜¬ë¦¼í”½ ì •ë³´ ë°˜í™˜
 	public static ArrayList<OlympicDTO> getAllOlympic() throws SQLException {
 
 		Connection con = null;
@@ -61,7 +61,7 @@ public class OlympicService {
 		return list;
 	}
 
-	// 2. ¿Ã¸²ÇÈ ÂüÀü ±¹°¡ ¸ñ·Ï
+	// 2. ì˜¬ë¦¼í”½ ì°¸ì „ êµ­ê°€ ëª©ë¡
 	public static HashSet<String> getAllCountryHS() throws SQLException {
 
 		Connection con = null;
@@ -84,7 +84,7 @@ public class OlympicService {
 		return list;
 	}
 
-	// 3. Æ¯Á¤ ±¹°¡ ÃÑ ¸Ş´Ş ¼ö
+	// 3. íŠ¹ì • êµ­ê°€ ì´ ë©”ë‹¬ ìˆ˜
 	public static ArrayList<String> getMedalCnt(String country) throws SQLException, NotExistException {
 
 		Connection con = null;
@@ -103,7 +103,7 @@ public class OlympicService {
 			int bSum;
 
 			if (rset.next()) {
-				// Á¡¼ö È¯»ê
+				// ì ìˆ˜ í™˜ì‚°
 				gSum = rset.getInt(2) * 5;
 				sSum = rset.getInt(3) * 3;
 				bSum = rset.getInt(4) * 1;
@@ -116,7 +116,7 @@ public class OlympicService {
 				totalMedal.add(3, String.valueOf(rset.getInt(4)));
 				totalMedal.add(4, String.valueOf(sumMedal));
 			} else {
-				throw new NotExistException("±¹°¡ Á¤º¸°¡ ¾ø½À´Ï´Ù");
+				throw new NotExistException("êµ­ê°€ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤");
 			}
 		} finally {
 			DBUtil.close(con, pstmt, rset);
@@ -124,7 +124,7 @@ public class OlympicService {
 		return totalMedal;
 	}
 
-	// 4. Æ¯Á¤ Á¾¸ñ Á¤º¸
+	// 4. íŠ¹ì • ì¢…ëª© ì •ë³´
 	public static SportDTO getSport(String country, String sportName) throws SQLException {
 
 		Connection con = null;
@@ -149,19 +149,19 @@ public class OlympicService {
 		return sport;
 	}
 
-	// 5. Æ¯Á¤ ¼±¼ö Á¤º¸
+	// 5. íŠ¹ì • ì„ ìˆ˜ ì •ë³´
 	public static void getPlayer(String country, String name) throws SQLException, NotExistException {
 		PlayerDAO.getPlayer(country, name);
 	}
 
-	// 6. Æ¯Á¤ ¼±¼ö ¹øÈ£·Î ¼±¼ö¸í ¼öÁ¤
+	// 6. íŠ¹ì • ì„ ìˆ˜ ë²ˆí˜¸ë¡œ ì„ ìˆ˜ëª… ìˆ˜ì •
 	public static boolean updatePlayer(String name, int playerNum) throws SQLException, NotExistException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		try {
 			con = DBUtil.getConnection();
 
-			// player table ¼öÁ¤
+			// player table ìˆ˜ì •
 			pstmt = con.prepareStatement(sql.getProperty("updatePlayer"));
 			pstmt.setString(1, name);
 			pstmt.setInt(2, playerNum);
@@ -171,7 +171,7 @@ public class OlympicService {
 			if (result == 1) {
 				return true;
 			} else {
-				throw new NotExistException("Æ¯Á¤ ¼±¼ö ¹øÈ£·Î ¼±¼ö¸í ¼öÁ¤ ½ÇÆĞ");
+				throw new NotExistException("íŠ¹ì • ì„ ìˆ˜ ë²ˆí˜¸ë¡œ ì„ ìˆ˜ëª… ìˆ˜ì • ì‹¤íŒ¨");
 			}
 		} finally {
 			DBUtil.close(con, pstmt);
@@ -179,7 +179,7 @@ public class OlympicService {
 //			return false;
 	}
 
-	// 6-1. ¼±¼ö ÀÌ¸§ ¼öÁ¤ ÈÄ °á°ú ¹İÈ¯
+	// 6-1. ì„ ìˆ˜ ì´ë¦„ ìˆ˜ì • í›„ ê²°ê³¼ ë°˜í™˜
 	public static PlayerDTO getOnePlayer(String name) throws SQLException, NotExistException {
 
 		Connection con = null;
@@ -198,7 +198,7 @@ public class OlympicService {
 				player = new PlayerDTO(rset.getInt(1), rset.getString(2), rset.getInt(3), rset.getString(4),
 						rset.getString(5));
 			} else {
-				throw new NotExistException("¼±¼ö Á¤º¸°¡ ¾ø½À´Ï´Ù");
+				throw new NotExistException("ì„ ìˆ˜ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤");
 			}
 		} finally {
 			DBUtil.close(con, pstmt, rset);
@@ -206,7 +206,7 @@ public class OlympicService {
 		return player;
 	}
 
-	// 7. ¸Ş´Ş ½ºÄÚ¾î·Î ·©Å· °Ë»ö
+	// 7. ë©”ë‹¬ ìŠ¤ì½”ì–´ë¡œ ë­í‚¹ ê²€ìƒ‰
 	public static HashMap<Integer, String[]> getMedalScore() throws SQLException {
 
 		Connection con = null;
@@ -232,7 +232,7 @@ public class OlympicService {
 		return totalMedal;
 	}
 
-	// 8. °Ë»ö ¼ö°¡ ¸¹Àº ¼±¼ö Ãâ·Â
+	// 8. ê²€ìƒ‰ ìˆ˜ê°€ ë§ì€ ì„ ìˆ˜ ì¶œë ¥
 	public static void searchLog() throws NotExistException {
 
 		BufferedReader in = null;
