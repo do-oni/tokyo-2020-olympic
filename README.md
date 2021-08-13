@@ -1,5 +1,5 @@
 # 🎖 Tokyo-2020-Olympic
-JDBC Mini Project 
+첫번째 JDBC  Mini Project 
 
 2020 도쿄 올림픽 정보 검색 서비스
 
@@ -11,7 +11,7 @@ JDBC Mini Project
 
 🙆 유영훈
 
-🙆‍♂️ 정은진
+🙆‍♀️ 정은진
 
 ## 🗓️ 프로젝트 추진 타임라인
 
