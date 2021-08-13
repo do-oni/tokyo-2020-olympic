@@ -1,3 +1,3 @@
-# Tokyo-2020-Olympic
-Mini Project
+# 🎖Tokyo-2020-Olympic
+JDBC Mini Project 
 
