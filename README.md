@@ -10,7 +10,7 @@
 
 🙆‍♀️ 서주연
 
-![image](https://user-images.githubusercontent.com/84673603/129449530-2687b6b8-61b6-4afc-949b-dd0b17df3bee.png) 유영훈
+🙆 유영훈
 
 🙆‍♀️ 정은진
 
