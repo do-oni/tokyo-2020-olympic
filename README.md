@@ -17,17 +17,7 @@
 
 ---
 
-[DB 생성](https://www.notion.so/DB-605e9912d4154ec3b45a8edcb647fadf)
-
-[MVC 패턴 프로젝트 생성](https://www.notion.so/MVC-054923efe82b4c9fa576996828e32e7f)
-
-[CRUD 메소드 구현](https://www.notion.so/CRUD-28614cb08dca43b9ba19839f4e903729)
-
-[프로젝트 파일 통합](https://www.notion.so/691893435bef4cf7a880de7a387974ad)
-
-[코드리뷰](https://www.notion.so/3869c56ad3b0428e8189b082a091847c)
-
-[코드수정](https://www.notion.so/f44cf9cd29754ad3bb3997115ca4c9c5)
+https://www.notion.so/08c858f1568748969a02d6e2a4d13e19?v=d6ae97a0776c4e498aa284aeee5caaba
 
 ## 🖥️ 전반적인 서비스 기술
 
