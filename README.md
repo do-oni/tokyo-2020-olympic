@@ -45,25 +45,36 @@ https://www.notion.so/08c858f1568748969a02d6e2a4d13e19?v=d6ae97a0776c4e498aa284a
 
 ---
 
+        <img width="209" alt="화면 캡처 2021-08-14 230949" src="https://user-images.githubusercontent.com/84673603/129449271-630e7a61-020f-47ed-b979-8f585861faed.png">
+
+         
 - 모든 올림픽 검색
-    - 메소드 명 :  OlympicController.getAllOlympic()
-    - 파라미터 :  없음
+    - 코드
+        
+        <img width="697" alt="화면 캡처 2021-08-14 231047" src="https://user-images.githubusercontent.com/84673603/129449277-993aa3a5-d38a-4b20-adc0-43f7c4abcc1b.png">
+
     - 실행 화면
    
-    ![Untitled](https://user-images.githubusercontent.com/84673603/129448881-3b8beaf1-9320-442e-b29b-a4d8d40dcc33.png)
+        ![Untitled](https://user-images.githubusercontent.com/84673603/129448881-3b8beaf1-9320-442e-b29b-a4d8d40dcc33.png)
 
 
 - 모든 올림픽 참전 국가 검색
-    - 메소드 명 :  OlympicController.getCountries()
-    - 파라미터 :  없음
+    - 코드
+      
+      <img width="478" alt="화면 캡처 2021-08-14 231107" src="https://user-images.githubusercontent.com/84673603/129449299-c72b64ef-4ca0-4dee-bc4c-f3e4f0deb078.png">
+
+      
     - 실행 화면
 
         ![Untitled (1)](https://user-images.githubusercontent.com/84673603/129448894-f30bd748-1437-4723-9aec-b427c3d64c07.png)
 
 
 - 특정 국가 모든 메달 수 검색
-    - 메소드 명: OlympicController.getMedalCnt()
-    - 파라미터 : String - 국가 명
+    - 코드
+
+        <img width="566" alt="화면 캡처 2021-08-14 231138" src="https://user-images.githubusercontent.com/84673603/129449319-ddb5e01c-0e56-4341-a660-3da64a51fc94.png">
+
+
     - 실행 화면
         - 성공 화면
 
@@ -76,8 +87,11 @@ https://www.notion.so/08c858f1568748969a02d6e2a4d13e19?v=d6ae97a0776c4e498aa284a
 
 
 - 특정 종목으로 검색
-    - 메소드 명: OlympicController.getSport()
-    - 파라미터 : String, String - 국가 명 , 종목
+    - 코드
+
+        <img width="574" alt="화면 캡처 2021-08-14 231203" src="https://user-images.githubusercontent.com/84673603/129449345-478f0195-851e-4b27-8cda-a0bed69b7629.png">
+
+
     - 실행 화면
         - 성공 화면
 
@@ -90,8 +104,11 @@ https://www.notion.so/08c858f1568748969a02d6e2a4d13e19?v=d6ae97a0776c4e498aa284a
 
 
 - 특정 선수 검색
-    - 메소드 명: OlympicController.getPlayer()
-    - 파라미터 : String , String  - 국가 명 , 선수 이름
+    - 코드
+
+        <img width="817" alt="화면 캡처 2021-08-14 231236" src="https://user-images.githubusercontent.com/84673603/129449382-ff7bac79-da90-4db8-a13f-031ea525799f.png">
+
+
     - 실행 화면
         - 성공 화면
 
@@ -104,8 +121,14 @@ https://www.notion.so/08c858f1568748969a02d6e2a4d13e19?v=d6ae97a0776c4e498aa284a
 
 
 - 특정 선수 번호로 선수 명 수정 후 검색
-    - 메소드 명: OlympicController.updatePlayer()
-    - 파라미터 : String, Int - 선수 이름, 선수 번호
+    - 코드
+
+        <img width="683" alt="화면 캡처 2021-08-14 231250" src="https://user-images.githubusercontent.com/84673603/129449393-08c93e0e-c933-454c-8134-9a1ba95b58fc.png">
+
+
+        <img width="685" alt="화면 캡처 2021-08-14 231302" src="https://user-images.githubusercontent.com/84673603/129449408-faeb4d3f-0027-4807-806a-2f7f69a8ce3a.png">
+
+
     - 실행 화면
         - 성공 화면
 
@@ -116,16 +139,21 @@ https://www.notion.so/08c858f1568748969a02d6e2a4d13e19?v=d6ae97a0776c4e498aa284a
             ![Untitled (9)](https://user-images.githubusercontent.com/84673603/129448938-ffa4442e-58c3-47cc-9fe5-0583c7e315a5.png)
 
 - 메달 스코어로 랭킹 검색
-    - 메소드 명: OlympicController.updatePlayer()
-    - 파라미터 : 없음
-    - 실행 화면
+    - 코드
+
+        <img width="517" alt="화면 캡처 2021-08-14 231318" src="https://user-images.githubusercontent.com/84673603/129449413-5a652ebb-77bd-4313-9cf3-6f25b9d40bf2.png">
+
+
         - 성공 화면
 
             ![Untitled (10)](https://user-images.githubusercontent.com/84673603/129448941-65867b30-7412-4582-9df4-0000799ee1e7.png)
 
 - 제일 많이 검색된 선수 출력
-    - 메소드 명: OlympicController.searchLog()
-    - 파라미터 : 없음
+    - 코드
+
+        <img width="537" alt="화면 캡처 2021-08-14 231338" src="https://user-images.githubusercontent.com/84673603/129449416-2f721c17-3b0d-4e71-8cfc-d7c9001d3d97.png">
+
+
     - 실행 화면
         - 성공 화면
 
