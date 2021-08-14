@@ -45,7 +45,7 @@ https://www.notion.so/08c858f1568748969a02d6e2a4d13e19?v=d6ae97a0776c4e498aa284a
 
 ---
 
-        <img width="209" alt="화면 캡처 2021-08-14 230949" src="https://user-images.githubusercontent.com/84673603/129449271-630e7a61-020f-47ed-b979-8f585861faed.png">
+<img width="209" alt="화면 캡처 2021-08-14 230949" src="https://user-images.githubusercontent.com/84673603/129449271-630e7a61-020f-47ed-b979-8f585861faed.png">
 
          
 - 모든 올림픽 검색
