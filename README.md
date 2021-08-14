@@ -10,7 +10,7 @@
 
 🙆‍♀️ 서주연
 
-🙆 유영훈
+![image](https://user-images.githubusercontent.com/84673603/129449530-2687b6b8-61b6-4afc-949b-dd0b17df3bee.png) 유영훈
 
 🙆‍♀️ 정은진
 
@@ -19,7 +19,6 @@
 ---
 
 https://www.notion.so/08c858f1568748969a02d6e2a4d13e19?v=d6ae97a0776c4e498aa284aeee5caaba
-
 
 
 ## 🖥️ 전반적인 서비스 기술
