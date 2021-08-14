@@ -37,7 +37,8 @@
 
 ## 🗃️ 엔티티 관계도
 
-![drawio.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20ad258b-864d-4719-85c5-57a339a569bf/drawio.jpg)
+![drawio](https://user-images.githubusercontent.com/84673603/129448703-3bf36955-da32-44fc-8f7b-327366c0b278.jpg)
+
 
 ## ⚙️ 기능 구현 목록
 
