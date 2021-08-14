@@ -272,27 +272,4 @@ public class OlympicService {
 			}
 		}
 	}
-
-	public OlympicDTO getOlympic(int olympicId) throws SQLException {
-		
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rset = null;
-		OlympicDTO olympic = null;
-
-		try {
-			con = DBUtil.getConnection();
-			pstmt = con.prepareStatement(sql.getProperty("getOlympic"));
-			pstmt.setInt(1, olympicId);
-			rset = pstmt.executeQuery();
-			
-			if (rset.next()) {
-				olympic = new OlympicDTO(rset.getInt(1), rset.getString(2), rset.getString(3), rset.getInt(4),
-						rset.getString(5));
-			}
-		} finally {
-			DBUtil.close(con, pstmt, rset);
-		}
-		return olympic;
-	}
 }
