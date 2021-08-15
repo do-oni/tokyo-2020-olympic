@@ -14,6 +14,7 @@ import olympic.model.dto.MedalDTO;
 import olympic.model.dto.OlympicDTO;
 import olympic.model.dto.PlayerDTO;
 import olympic.model.dto.SportDTO;
+import olympic.model.OlympicDAO;
 
 public class RunningEndView {
 	
@@ -26,54 +27,54 @@ public class RunningEndView {
 			if (length != 0) {
 				
 				for (int index = 0; index < length; index++) {
-					System.out.println("°Ë»öÁ¤º¸ " + (index + 1) + " - " + allOlympic.get(index));
+					System.out.println("ê²€ìƒ‰ì •ë³´ " + (index + 1) + " - " + allOlympic.get(index));
 				}
 			} else {
-				System.out.println("¿äÃ»ÇÏ½Å ¿Ã¸²ÇÈ Á¤º¸´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+				System.out.println("ìš”ì²­í•˜ì‹  ì˜¬ë¦¼í”½ ì •ë³´ëŠ” ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			}
 		} else {
-			System.out.println("¿äÃ»ÇÏ½Å ¿Ã¸²ÇÈ Á¤º¸´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ìš”ì²­í•˜ì‹  ì˜¬ë¦¼í”½ ì •ë³´ëŠ” ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 	}
 
-	// Æ¯Á¤ ±¹°¡ ¸Ş´Ş ¼ö Ãâ·Â
+	// íŠ¹ì • êµ­ê°€ ë©”ë‹¬ ìˆ˜ ì¶œë ¥
 	public static void olympicView(MedalDTO medal) {
 		System.out.println(medal);
 	}
 
-	// Æ¯Á¤ Á¾¸ñ °Ë»ö
+	// íŠ¹ì • ì¢…ëª© ê²€ìƒ‰
 	public static void olympicView(SportDTO sport) {
 		if (sport == null) {
-			System.out.println("°Ë»öÇÑ Á¾¸ñÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ê²€ìƒ‰í•œ ì¢…ëª©ì´ ì—†ìŠµë‹ˆë‹¤.");
 		} else {
 			System.out.println(sport);
 		}
 	}
 
-	// Æ¯Á¤ ¼±¼ö °Ë»ö
+	// íŠ¹ì • ì„ ìˆ˜ ê²€ìƒ‰
 	public static void olympicView(PlayerDTO player) {
 		System.out.println(player);
 	}
 
-	//¸ğµç DTO
+	//ëª¨ë“  DTO
 	public static void allView(Object data) {
 		if (data != null) {
 			System.out.println(data);
 		} else {
-			System.out.println("¿äÃ»ÇÏ½Å id¿¡ ÇØ´çÇÏ´Â Á¤º¸´Â ¾ø½À´Ï´Ù.");
+			System.out.println("ìš”ì²­í•˜ì‹  idì— í•´ë‹¹í•˜ëŠ” ì •ë³´ëŠ” ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 
-	// update ¼º°ø, ½ÇÆĞ½Ã ¸Ş¼¼Áö Ãâ·Â -
+	// update ì„±ê³µ, ì‹¤íŒ¨ì‹œ ë©”ì„¸ì§€ ì¶œë ¥ -
 	public static void updateView(boolean result, String name, int playerNum) {
 		if (result) {
-			System.out.println("¿äÃ»ÇÏ½Å " + name + playerNum + " ¼öÁ¤ ¿Ï·á");
+			System.out.println("ìš”ì²­í•˜ì‹  " + name + playerNum + " ìˆ˜ì • ì™„ë£Œ");
 		} else {
-			System.out.println("¿äÃ»ÇÏ½Å " + name + " ¼öÁ¤ ½ÇÆĞ, ´Ù¸¥ ÀÌ¸§À¸·Î °Ë»öÇØÁÖ¼¼¿ä.");
+			System.out.println("ìš”ì²­í•˜ì‹  " + name + " ìˆ˜ì • ì‹¤íŒ¨, ë‹¤ë¥¸ ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰í•´ì£¼ì„¸ìš”.");
 		}
 	}
 
-	// ¿¹¿Ü »óÈ² Ãâ·Â
+	// ì˜ˆì™¸ ìƒí™© ì¶œë ¥
 	public static void showError(String message) {
 		System.out.println(message);
 	}
@@ -87,43 +88,43 @@ public class RunningEndView {
 				Iterator iter = allCountryHS.iterator();
 				int i = 0;
 				while (iter.hasNext()) {
-					System.out.println("°Ë»öÁ¤º¸ " + (i + 1) + " - " + iter.next());
+					System.out.println("ê²€ìƒ‰ì •ë³´ " + (i + 1) + " - " + iter.next());
 					i++;
 				}
 			} else {
-				System.out.println("¿äÃ»ÇÏ½Å ±¹°¡ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+				System.out.println("ìš”ì²­í•˜ì‹  êµ­ê°€ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 			}
 		} else {
-			System.out.println("¿äÃ»ÇÏ½Å ±¹°¡ Á¤º¸´Â ¾ø½À´Ï´Ù.");
+			System.out.println("ìš”ì²­í•˜ì‹  êµ­ê°€ ì •ë³´ëŠ” ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 
 	public static void olympicView(ArrayList<String> totalMedal) {
-		System.out.println("°Ë»öÇÏ½Å ±¹°¡ " + "'" + totalMedal.get(0) + "'" + "ÀÇ ¸Ş´Ş È¹µæ ÇöÈ²Àº ¾Æ·¡¿Í °°½À´Ï´Ù.\n" 
-								  + "±İ¸Ş´Ş : " + totalMedal.get(1) + "°³\n" 
-								  + "Àº¸Ş´Ş : " + totalMedal.get(2) + "°³\n" 
-								  + "µ¿¸Ş´Ş : " + totalMedal.get(3)+ "°³\n" 
-				  + "µû¶ó¼­ ÇØ´ç ±¹°¡ÀÇ ¿Ã¸²ÇÈ ÃÑÁ¡Àº " + totalMedal.get(4) + "Á¡ÀÔ´Ï´Ù.");
+		System.out.println("ê²€ìƒ‰í•˜ì‹  êµ­ê°€ " + "'" + totalMedal.get(0) + "'" + "ì˜ ë©”ë‹¬ íšë“ í˜„í™©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\n" 
+								  + "ê¸ˆë©”ë‹¬ : " + totalMedal.get(1) + "ê°œ\n" 
+								  + "ì€ë©”ë‹¬ : " + totalMedal.get(2) + "ê°œ\n" 
+								  + "ë™ë©”ë‹¬ : " + totalMedal.get(3)+ "ê°œ\n" 
+				  + "ë”°ë¼ì„œ í•´ë‹¹ êµ­ê°€ì˜ ì˜¬ë¦¼í”½ ì´ì ì€ " + totalMedal.get(4) + "ì ì…ë‹ˆë‹¤.");
 	}
 
 	public static void medalRankView(HashMap<Integer, String[]> medalScore) {
 		if (medalScore != null) {
 			
 			for (Entry<Integer, String[]> entrySet : medalScore.entrySet()) {
-				System.out.println(entrySet.getKey() + " : ±¹°¡  :" + entrySet.getValue()[0] + ", Á¾¸ñ : "
-						+ entrySet.getValue()[1] + ", ½ºÄÚ¾î : " + entrySet.getValue()[2]);
+				System.out.println(entrySet.getKey() + " : êµ­ê°€  :" + entrySet.getValue()[0] + ", ì¢…ëª© : "
+						+ entrySet.getValue()[1] + ", ìŠ¤ì½”ì–´ : " + entrySet.getValue()[2]);
 			}
 		} else {
-			System.out.println("¿äÃ»ÇÏ½Å ¸Ş´Ş ·©Å© Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ìš”ì²­í•˜ì‹  ë©”ë‹¬ ë­í¬ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 
 	public static OlympicDTO getOlympic(int olympicId) throws SQLException, NotExistException {
 		
-		OlympicDTO olympic = service.getOlympic(olympicId);
+		OlympicDTO olympic = OlympicDAO.getOlympic(olympicId);
 		
 		if (olympic == null) {
-			throw new NotExistException("°Ë»öÇÏ½Å ¿Ã¸²ÇÈ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+			throw new NotExistException("ê²€ìƒ‰í•˜ì‹  ì˜¬ë¦¼í”½ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		return olympic;
 	}
